@@ -1,0 +1,209 @@
+body::-webkit-scrollbar {
+	width: 15px;              
+}
+body::-webkit-scrollbar-track {
+	background: white;
+	margin: 5px 0;
+	}
+body::-webkit-scrollbar-thumb {
+ 	background-color: lightgreen;   
+	border-radius: 20px;      
+	border: 4px solid lightgreen;
+} 
+
+header, footer {
+	background: lightgreen;
+	font: #222;
+	font-size: 48px;
+	padding: 20px 40px;
+}
+.exemplo {
+	background: lightgreen;
+	color: #222;
+	padding: 15px 20px;
+	border-radius: 15px;
+	display: inline-block;
+	box-shadow: 5px 5px 10px #BBB;
+}
+header {
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+header h4 {
+	text-align: right;
+}
+nav {
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+.ancora {
+	transition: 1s all;
+	font-size: 1.2em;
+	color: darkgreen;
+	text-align: right;
+	margin-left: 1em;
+	background-color: lightgreen;
+	border-radius: 15px;
+	padding: 0.5em;
+	text-decoration: none;
+	font-weight: bold;
+}
+.ancora:hover {
+	color: #222;
+	text-decoration: underline;
+}
+footer {
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+main div {
+	margin: 15px 0;
+}
+main div p, li {
+	font-size: 22px;
+	color: #222;
+}
+main section h2 {
+	color: darkgreen;
+}
+main div h3 {
+	color: green;
+}
+main section div {
+	margin-left: 1em;
+}
+main div a {
+	color:  #222;
+	font-size: 22px;
+}
+.exemplo form label {
+	margin: 15px 0;
+	font-size: 24px;
+}
+.exemplo fieldset label {
+	margin: 10px;
+	display: block;
+}
+.exemplo th, td {
+	border: 2px #222 solid;
+	padding: 5px 10px;
+}
+.exemplo thead, tfoot {
+	text-align: center;
+}
+#label-check {
+	display: block;
+	margin: 15px;
+}
+.exemplo button {
+	transition: 1.5s all;
+}
+.codigo {
+	font-size: 1.2em;
+	color: darkgreen;
+	font-weight: bold;
+}
+/* Definindo alguns estilos de exemplo */
+#hover:hover {
+	background-color: #FFF;
+	color: #222;
+}
+ #focus:focus {
+ 	background-color: lightcyan;
+ 	color:  fuchsia;
+ } 
+#active:active {
+	background-color: floralwhite;
+	color: firebrick;
+}
+#submit {
+	cursor: pointer;
+}
+#botao-transicao {
+	transition: 1.5s all;
+}
+#botao-transicao:hover {
+	background-color: #FFF;
+	color: #222;
+}
+.perfil {
+	opacity: 70%;
+	position: fixed;
+	font-size: 1.05em;
+	padding: 0.6em;
+	right: 1em;
+	border-radius: 15px;
+	color: #CDCDCD;
+	background-color: green;
+	top: 0.5em;
+	text-decoration: none;
+	transition: 0.5s all;
+	box-shadow: inset 0 0 8px lightgreen;
+}
+.perfil:hover {
+	opacity: 100%;
+	transform: scale(1.05);
+	color: #EEE;
+}
+.video {
+	margin: 1.5em auto;
+}
+.mapa {
+	padding: 0 3em;
+	display: block;
+}
+.entre-parenteses::before {
+	content: "( ";
+}
+.entre-parenteses::after {
+	content: " )";
+}
+.primeira-em-negrito::first-letter {
+	font-weight: bold;
+}
+.primeira-maior::first-letter {
+	font-size: 1.4em;
+}
+.degrade {
+	background: linear-gradient(grey, lightgrey, white);
+}
+.degrade-vertical {
+	background: linear-gradient(90deg, grey, lightgrey, white);
+}
+.degrade-circular {
+	background: radial-gradient(lightgrey, white);
+}
+.arco-iris {
+	background: linear-gradient(90deg, red, orange, yellow, green, blue, darkblue, violet);
+}
+.transformar {
+	transition: 1.5s all;
+}
+.scale:hover {
+	transform: scale(1.2);
+}
+.rotate:hover {
+	transform: rotate(360deg);
+}
+footer {
+	text-align: center;
+	margin-top:  1.5em;
+}
+@media screen and (max-width: 480px) {
+	body {
+		font-size: 1.15em;
+	}
+	.container {
+		width: 100%;
+	}
+	.video iframe {
+		width: 240px;
+		height: 135px;
+	}
+	section {
+		text-align: justify;
+	}
+	.perfil {
+		display: none;
+	}
+}

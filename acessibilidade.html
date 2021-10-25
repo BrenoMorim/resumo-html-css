@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Acessibilidade Web</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Resumo sobre acessibilidade web:</h1>
+			<h2>Como tornar seu site mais acessível.</h2>
+			<h4>Feito por Breno Morim</h4>
+		</header>
+		<nav>
+			<a class="ancora" href="resumo-html.html">Ir para resumo sobre HTML</a>
+			<a class="ancora" href="resumo-css.html">Ir para resumo sobre CSS</a>
+			<a class="perfil" href="">Acesse o meu perfil do GitHub para mais conteúdo!</a>
+		</nav>
+		<main>
+			<section class="mt-3">
+				<h2>Introdução</h2>
+				<div>
+					<h3>Por que pensar em acessibilidade?</h3>
+					<p>Pensar na acessibilidade é fundamental para mantermos uma sociedade mais inclusiva e justa. Quando falamos em deficiência, não falamos somente de problemas de visão ou audição, mas também de problemas cognitivos e de mobilidade. Todos nós teremos alguma limitação algum dia, mesmo que seja de forma temporária, como um osso quebrado, por exemplo. Além disso, cerca de 25% da população brasileira possui alguma deficiência.</p>
+				</div>
+				<div>
+					<h3>Como devemos chamar essas pessoas?</h3>
+					<p>Os termos mais usados atualmente são: PCD (pessoas com deficiência) e PNE (pessoas com necessidades especiais). Termos como especial, excepcional, pessoa com problema, palavras no diminutivo e inclusive deficiente podem ser vistos de forma desrespeitosa, além de caracterizarem a pessoa pela deficiência que ela tem: existe uma diferença entre ser e ter uma deficiência.</p>
+				</div>
+				<div>
+					<h3>Quem determina os padrões de acessibilidade?</h3>
+					<p>Os padrões são estabelecidos na WCAG - Diretrizes de Acessibilidade para Conteúdo Web. Essas diretrizes são determinadas pela organização W3C: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Site da W3C</a>.</p>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Autismo:</h2>
+				<div>
+					<h3>O que é?</h3>
+					<p>O autismo é uma síndrome e não uma deficiência, os "sintomas" apresentados variam de acordo com a pessoa, mas existem algumas características mais comuns: sentidos mais aguçados, dificuldade de interpretação e preocupação com padronização.</p>
+				</div>
+				<div>
+					<h3>Cuidados que devem receber atenção:</h3>
+					<ul>
+						<li>Evitar cores muito brilhantes.</li>
+						<li>Usar uma linguagem direta e clara, sem muitas metáforas ou figuras de linguagem.</li>
+						<li>Procure deixar o design do site mais padronizado.</li>
+						<li>Crie botões e links de forma clara, além de alertar o usuário qual a sua função.</li>
+						<li>Não deixe blocos muito extensos de texto puro, divida-o em parágrafos, use títulos, subtítulos, imagens e ícones para facilitar a leitura.</li>
+						<li>Exagerar no uso de verbos no imperativo é má prática, pois é como se estivéssemos dando ordens aos usuários.</li>
+						<li>Confira os exemplos abaixo:</li>
+					</ul>
+					<div class="exemplo m-3">
+						<p><button class="btn btn-danger" style="background-color: #FF0000;">Cor muito brilhante - #FF0000</button>➜
+						<button class="btn btn-danger" style="background-color: #BF532C;">Cor mais fosca - #BF532C</button></p>
+						<p><button class="btn btn-primary" style="background-color: #0000FF;">Cor muito brilhante - #0000FF</button>➜
+						<button class="btn btn-primary" style="background-color: #2F4CC1;">Cor mais fosca- #506AD4</button></p>
+					</div>
+					<div class="exemplo m-3">
+						<p>Não durma no ponto ➜ Preste atenção.</p>
+						<p>Estar de parar o trânsito ➜ Chamar atenção / Ficar bom.</p>
+						<p>Experiência de mercado ➜ Experiência profissional.</p>
+					</div>
+					<div class="exemplo m-3">
+						<p><button class="btn btn-primary" style="background-color: lightgreen;">Clique Aqui</button> ➜ <button class="btn btn-primary" style="background-color: #506AD4;">Continuar a leitura do post</button></p>
+						<p><button class="btn btn-danger" style="background-color: lightgreen;">Venha!</button> ➜ <button class="btn btn-danger" style="background-color: #BF532C;">Fazer um cadastro</button></p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Surdez:</h2>
+				<div>
+					<h3>Trocar textos mais longos por imagens:</h3>
+					<p>Como a língua portuguesa, seja ela escrita ou falada, é diferente de Libras, usar muito texto na página torna a leitura mais difícil para uma pessoa que não tenha o português como primeira língua. Por isso, é bom trocar textos mais longos por imagens, o que torna a página mais atrativa não só para pessoas com deficiência auditiva, mas também para o público geral. É importante também mostrar outras formas de contato, que sejam alternativas ao telefone.</p>
+				</div>
+				<div>
+					<h3>Legendas:</h3>
+					<p>Quando queremos colocar um vídeo na página, é importante verificar se o vídeo tem legendas. Isso é importante não só para a inclusão de pessoas com deficiência auditiva, mas também por uma questão de comodidade, às vezes, quando estamos em público ou não temos um fone à disposição pode ser preferível assistir o vídeo pela legenda.</p>
+				</div>
+			</section>
+			<section>
+				<h2>Dislexia:</h2>
+				<div>
+					<h3>O que é a dislexia?</h3>
+					<p>A dislexia não é uma deficiência, mas sim um transtorno. Esse transtorno pode apresentar diferentes sintomas de acordo com a pessoa, mas no geral, pessoas com dislexia têm dificuldade em ler e escrever textos. Além disso, outra dificuldade comum é na hora de memorizar certas informações, como números de telefone, nomes e entre outros.</p>
+				</div>
+				<div>
+					<h3>Considerações importantes:</h3>
+					<ul>
+						<li>É recomendável usar o alinhamento de texto à esquerda, pois é a ordem natural de leitura no português.</li>
+						<li>Textos justificados acabam criando espaçamentos irregulares, que podem formar o que é conhecido como "caminhos de rato".</li>
+						<li>Utilize o alinhamento central somente em algumas situações, como nos títulos principais.</li>
+						<li>Padronize o texto, de forma a evitar decorações, como o underline, assim como palavras com letras maiúsculas, que dificultam a leitura.</li>
+						<li>No geral, evite textos muito longos.</li>
+					</ul>
+					<div class="exemplo">
+						<p style="text-decoration: underline; text-align: center;">ALGUM TEXTO QUALQUER</p>
+					</div>
+					<div class="exemplo">
+						<p>Algum texto qualquer.</p>
+					</div>
+				</div>
+				<div>
+					<h3>Formulários e cores:</h3>
+					<p>É boa prática colocar não só placeholders, mas também labels nos inputs, por conta da possível dificuldade na memorização, também é recomendável que os inputs tenham maneiras de fazer correções ou sugestões em caso de erros. Outra característica possível é a sensibilidade a cores com contraste muito alto, que podem causar dor de cabeça em alguns dislexos. Tente usar cores com contraste menor, por exemplo:</p>
+					<div class="exemplo col-12">
+						<form class="form-group">
+							<label for="nome">Nome completo:</label>
+							<input class="form-control" type="text" id="nome" placeholder="Exemplo: João de Sousa Andrade" required/>
+							<div>
+								<button class="btn btn-dark" style="color: #FFF; background-color: #000;">Fundo #000000.</button> ➜ <button class="btn btn-dark" style="color: #FFF; background-color: #333;">Fundo #333333.</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div>
+					<h3>Vídeos e animações:</h3>
+					<p>Colocar vídeos de fundo pode tirar a atenção de pessoas neurotípicas no geral, dificultando ainda mais a leitura. É preferível tirar um print do vídeo e colocar de fundo.</p>
+				</div>
+			</section>
+			<section>
+				<h2>Baixa visão:</h2>
+				<div>
+					<h3>Contraste e fonte mínima</h3>
+					<p>Para pessoas com baixa visão, o contraste mínimo entre a cor da fonte e o texto deve ser de 4.5 : 1. O nível de contraste pode ser verificado com uma ferramenta constrast checker, que pode ser encontrada em diversos sites. Além disso, o tamanho mínimo de fonte varia de acordo com as diretrizes seguidas, mas no geral o mínimo varia entre 14 e 16.</p>
+					<div class="exemplo">
+						<button class="btn btn-primary m-3" style="background-color:#56CCF2; border: none;">Contraste baixo</button><button class="btn btn-primary m-3" style="background-color: #2F4CC1; border: none">Contraste aceitável</button>
+					</div>
+					<p>Você pode verificar o contraste pelo site: <a href="https://contrastchecker.com">contrastchecker.com</a></p>
+				</div>
+				<div>
+					<h3>Informações escondidas e zoom</h3>
+					<p>Procure deixar todas as informações necessárias no seu site, evite fazer com que o usuário tenha que baixar um pdf ou algo do tipo, pois isso pode dificultar a navegação. É importante lembrar que o zoom, principalmente no celular, é uma ferramenta fundamental para qualquer pessoa que apresenta alguma dificuldade na visão, por isso nunca bloqueie o zoom dos usuários.</p>
+				</div>
+				<div>
+					<h3>Daltonismo</h3>
+					<p>Pensando em pessoas com daltonismo, é importante não passar informação somente por cor e dar mensagens de erro descritivas, pois é possível que a pessoa não consiga discernir o vermelho do verde, portanto só a mudança de cor em caso de erro em formulários não seria suficiente, por exemplo.</p>
+				</div>
+			</section>
+			<section>
+				<h2>Deficiências físicas:</h2>
+				<div>
+					<h3>Pontos importantes:</h3>
+					<p>Quando falamos melhorar a acessibilidade para pessoas com deficiência física, estamos pensando em vários tipos de limitação, desde casos de Parkinson e pessoas que precisam usar adaptadores para navegar na internet até pessoas com lesões como ossos quebrados ou queimaduras.</p>
+					<p>São algumas boas práticas:</p>
+					<ul>
+						<li>Não crie botões muito pequenos, o tamanho mínimo de um botão varia entre 44px e 50px de acordo com as diretrizes seguidas.</li>
+						<li>Facilite a navegação do site, crie uma barra de navegação clara.</li>
+						<li>Proporcione outras formas de navegar, de modo que o uso de mouse não seja obrigatório (possibilitar o uso do teclado, por exemplo).</li>
+						<li>Tome cuidado com pop-ups que aparecem do nada.</li>
+						<li>Evite campos de input desnecessários, digitar muito pode ser um desafio para algumas pessoas. Por exemplo, usar o CEP para pegar o endereço automaticamente.</li>
+						<li>Coloque um espaçamento adequado entre os elementos.</li>
+					</ul>
+					<div class="exemplo">
+						<form>
+							<fieldset>
+								<legend>Botão muito pequeno - 10px : 10px</legend>
+								<input type="radio" class="m-1" name="radiobox" id="radio1" style="width: 10px; height: 10px;" checked>
+							</fieldset>
+							<fieldset class="mt-2">
+								<legend>Botão com tamanho bom - 45px : 45px</legend>
+								<input type="radio" class="m-1" name="radiobox" id="radio2" style="width: 45px; height: 45px;">
+							</fieldset>
+							<fieldset class="mt-2">
+								<legend style="font-size: 24px;">Quando o input e o label estão ligados, é possível selecionar o botão clicando no texto, o que melhora a usabilidade.</legend>
+								<label for="radio" class="m-2"><input type="radio" class="m-2" name="radiobox" id="radio">Label ligado ao input.</label>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<h3>Espero ter ajudado!</h3>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>Resumo HTML</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Resumo sobre as principais tags HTML:</h1>
+			<h2>HTML -> Hyper Text Markup Language</h2>
+			<h4>Feito por Breno Morim</h4>
+		</header>	
+		<nav>
+			<a class="ancora" href="resumo-css.html">Ir para resumo sobre CSS</a>
+			<a class="ancora" href="acessibilidade.html">Ir para resumo sobre acessibilidade</a>
+			<a class="perfil" href="">Acesse o meu perfil do GitHub para mais conteúdo!</a>
+		</nav>
+		<main>
+			<section class="mt-4">
+				<h2>Tags iniciais:</h2>
+				<div>
+					<h3>Tags: html, script e style</h3>
+					<p>Delimita as partes do código escritas, respectivamente, em HTML, JavaScript e CSS.</p>
+				</div>
+				<div>
+					<h3>Tags head e body:</h3>
+					<p>A tag head corresponde a informações passadas ao navegador, enquanto a body corresponde ao conteúdo em si.</p>
+				</div>
+				<div>
+					<h3>Tags da head:</h3>
+					<ul>
+						<li>link : Corresponde a um import, normalmente de um arquivo .css ou .js, o endereço do arquivo é definido na propriedade href e seu tipo na propriedade rel, fica na tag head.</li>
+						<li>meta : Defini algumas configurações, como o encoding.</li>
+						<li>title : Altera o nome que aparecerá na guia do navegador.</li>
+					</ul>
+				</div>
+			</section>
+			<section class="mt-4">
+				<h2>Divisões de uma página e boas práticas:</h2>
+				<div>
+					<h3>Principais tags:</h3>
+					<ul>
+						<li>div : Divisão Genérica</li>
+						<li>section : Divide um conteúdo com a mesma semântica, significado</li>
+						<li>header : Cabeçalho</li>
+						<li>main : Conteúdo Principal</li>
+						<li>footer : Rodapé</li>
+						<li>nav : Barra de Navegação</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Boas práticas quando usamos divs:</h3>
+					<p>Usar divs de forma excessiva no nosso HTML é uma má prática, pois assim o código pode ficar menos semântico e mais difícil de ser lido e de receber manutenção. Além das tags que citamos acima, existem outras que podem ser úteis:</p>
+					<ul>
+						<li>code : Demarca um código qualquer que quisermos mostrar, seja CSS, JavaScript ou qualquer outra linguagem.</li>
+						<li>blockquote : Tag usada para marcar uma citação de outro autor.</li>
+						<li>mark : Uma marcação qualquer, como se estivéssemos marcando o conteúdo com um marca texto, dando mais destaque.</li>
+						<li>summary : Demarca o sumário da página, onde resumiremos um pouco do conteúdo, indicando a ordem na qual o conteúdo aparecerá.</li>
+						<li>article : Usada para delimitar o conteúdo referente a um artigo.</li>
+						<li>aside : Um adendo qualquer, usamos quando queremos passar uma observação, por exemplo. A tradução para 'aside' é 'à parte'.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Qual a diferença entre as propriedades class e id:</h3>
+					<p>Usamos class quando queremos atribuir estilo, enquanto usamos id quando queremos definir um comportamento. Como o id é muito específico e é um tipo de seleção muito forte, normalmente utilizamos class, que é uma seleção mais fraca e portanto mais fácil de fazer alterações.</p>
+				</div>
+			</section>
+			<section>
+				<h2>Trabalhando com listas e texto:</h2>
+				<div>
+					<h3>Tags de título:</h3>
+					<p>Marcam um título, que vai de h1 a h6, sendo h1 o principal e h6 o menor.</p>
+					<div class="exemplo">
+						<h1>h1</h1>
+						<h2 style="color: #222; text-transform: lowercase;">h2</h2>
+						<h3 style="color: #222; text-transform: lowercase;">h3</h3>
+						<h4>h4</h4>
+						<h5>h5</h5>
+						<h6>h6</h6>
+					</div>
+				</div>
+				<div>
+					<h3>Tags de listas:</h3>
+					<ul>
+						<li>ul : Unordained list, lista não ordenada, tem uma ordem específica a ser seguida.</li>
+						<li>ol : Ordained list, lista ordenada, os elementos tem que ter uma ordem definida.</li>
+						<li>li : List item, define um item da lista.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Tags de texto:</h3>
+					<ul>
+						<li>p : Marca um parágrafo.</li>
+						<li>em : Texto em itálico.</li>
+						<li>b : Texto em negrito.</li>
+						<li>strong : Texto também em negrito, usamos quando queremos dar uma ênfase maior no texto, dando uma semântica diferente.</li>
+						<li>sup : Texto na parte superior.</li>
+						<li>sub : Texto na parte inferior.</li>
+						<li>br : Quebra de página.</li>
+					</ul>
+					<p>Na maioria dos casos, é má prática utilizar as tags em, strong e br, já que essas características podem ser definidas mais facilmente no CSS.</p>
+					<div class="exemplo">
+						<p>Isto é um parágrafo.</p>
+						<p><em>Isto está em itálico.</em></p>
+						<p><b>Isto está em negrito.</b></p>
+						<p><strong>Isto é um texto strong.</strong></p>
+						<p>Texto<sup>sup</sup><sub>sub</sub></p>
+						<p>Log<sub>10</sub>10<sup>10</sup> = 10</p>
+						<p>H<sup>+</sup> + OH<sup>-</sup> -> H<sub>2</sub>O</p>
+						<p>Ca<sup>2+</sup>(OH<sup>-</sup>)<sub>2</sub> + H<sup>+</sup><sub>2</sub>SO<sub>4</sub><sup>2-</sup> -> CaSO<sub>4</sub> + 2H<sub>2</sub>O</p>
+					</div>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Relação com outras páginas:</h2>
+				<div>
+					<h3>Tags básicas:</h3>
+					<ul>
+						<li>a : Âncora, define um link que redireciona para outra página.</li>
+						<li>img : Imagem, que pode ser importada de um endereço na web, ou de um arquivo local, passando o caminho dos diretórios e o nome do arquivo, a propriedade src define a fonte e alt mostra uma visualização alternativa, contribuindo com a acessibilidade.</li>
+						<li>iframe : É como uma incorporação de uma janela de outro site, como apresentações do powerpoint, páginas do facebook, fotos do Instagram, mapas, vídeos do YouTube e de outras plataformas e entre outras formas de conteúdo. Esses conteúdos possuem um código de incorporação, que pode ser copiado e colado no seu código html.</li>
+					</ul>
+					<div class="exemplo col-12">
+						<p style="text-align: center;"><a href="https://www.alura.com.br">Site da Alura</a></p>
+						<div class="video">
+							<img width="80%" src="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg" alt="Imagem de Exemplo">
+						</div>
+						<div class="video">
+							<iframe width="100%" height="480" src="https://www.youtube.com/embed/nLPssMXOExM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: inline-block;"></iframe>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h3>Importando mapas:</h3>
+					<p>É possível incorporar mapas usando a tag iframe. O código de incorporação pode ser obtido através de serviços como o <a href="https://maps.google.com">Google Maps</a>.</p>
+					<div class="mapa exemplo col-12 p-3">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10193.456976521953!2d-46.66125233356872!3d-23.591719610921757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59bf1f78db9f%3A0x669617b18ff956ca!2sParque%20Ibirapuera%20-%20Port%C3%A3o%207!5e0!3m2!1spt-BR!2sbr!4v1632568349230!5m2!1spt-BR!2sbr" width="100%" height="380" style="border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+				</div>
+			</section>
+			<section class="mt-4">
+				<h2>Trabalhando com botões e formulários:</h2>
+				<div>
+					<h3>Tag button:</h3>
+					<p>Cria um botão que pode fazer uma ação, normalmente executando uma função em JavaScript.</p>
+					<div class="exemplo">
+						<button class="btn btn-dark" onclick="acionarAlerta()">Botão de Alerta</button>
+						<script type="text/javascript">
+							function acionarAlerta() {
+								alert("Você Apertou o Botão!")
+							}
+						</script>
+					</div>
+				</div>
+				<div>
+					<h3>Tags usadas para formulários:</h3>
+					<ul>
+						<li>form : Tag que envolve o formulário, definindo o destino dos dados.</li>
+						<li>input : Entrada de dados, se relaciona com o label através do seu name e id.</li>
+						<li>label : Rótulo para os inputs, a propriedade for define o input a que se refere.</li>
+						<li>textarea : Delimita uma área de texto, que ao contrário de um input, não é limitado a apenas uma linha.</li>
+						<li>select : Representa uma combobox, onde é possível selecionar uma opção.</li>
+						<li>option : É uma opção possível para o select.</li>
+						<li>fieldset : Marca uma divisão para inputs de radiobox ou selects.</li>
+						<li>legend : Funciona como um título para as opções a serem marcadas no input.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Tipos de input:</h3>
+					<ul>
+						<li>radio : Uma radiobox que pode ser selecionada.</li>
+						<li>checkbox : Uma caixinha que pode ser selecionada.</li>
+						<li>text : Usado para textos comuns.</li>
+						<li>password : Usado para senhas.</li>
+						<li>number : Números comuns.</li>
+						<li>tel : Números de telefone.</li>
+						<li>email : Usado para emails.</li>
+						<li>submit : Envia os dados.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Propriedades de inputs:</h3>
+					<ul>
+						<li>id : Identificação do input, faz a ligação com o label.</li>
+						<li>name : Define o nome do input, usado para demarcar inputs diferentes mas que fazem parte de um mesmo grupo.</li>
+						<li>required : Torna o campo obrigatório.</li>
+						<li>checked : Marca uma box por padrão, podendo ser checkbox ou radiobox.</li>
+						<li>placeholder : Auxilia o usuário, com um exemplo a ser seguido ou uma dica.</li>
+						<li>value : Define seu valor.</li>
+					</ul>
+					<div class="exemplo col-12">
+						<form class="form-group">
+							<label for="nome">Nome:</label>
+							<input class="form-control" type="text" id="nome" placeholder="Digite seu Nome Completo" />
+							<label for="email">Email:</label>
+							<input class="form-control" required type="email" id="email" placeholder="seuemail@dominio.com"/>
+							<label for="senha">Senha:</label>
+							<input class="form-control" type="password" id="senha" placeholder="Digite sua Senha" />
+							<label for="telefone">Telefone:</label>
+							<input class="form-control" type="tel" id="telefone" placeholder="+55 (XX) XXXXX - XXXX" />
+							<label for="textarea">Mensagem</label>
+							<textarea id="textarea" placeholder="Digite uma mensagem (Opcional)" class="form-control"></textarea>
+							<fieldset class="mt-2">
+								<legend>Seleção com radiobox</legend>
+								<label for="radio1"><input type="radio" class="m-1" name="radiobox" id="radio1" checked>Opção 1</label>
+								<label for="radio2"><input type="radio" class="m-1" name="radiobox" id="radio2">Opção 2</label>
+								<label for="radio3"><input type="radio" class="m-1" name="radiobox" id="radio3">Opção 3</label>
+							</fieldset>
+							<fieldset class="mt-2">
+								<legend>Seleção com Select</legend>
+								<select class="p-1 m-2">
+									<option class="m-1 p-1">Opção1</option>
+									<option class="m-1 p-1">Opção2</option>
+									<option class="m-1 p-1">Opção3</option>
+								</select>
+							</fieldset>
+							<label for="check" class="form-check-label" id="label-check"><input class="form-check-input me-2" type="checkbox" checked name="check" id="check">Checkbox</label>
+							<input type="submit" class="mt-3 btn btn-dark" id="submit" value="Enviar Formulário">
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Tabelas:</h2>
+				<div>
+					<h3>Tags básicas:</h3>
+					<ul>
+						<li>table : Tag raíz de uma tabela.</li>
+						<li>thead : Marca seu cabeçalho.</li>
+						<li>tbody : Marca o corpo da tabela.</li>
+						<li>tfoot : Delimita o rodapé da tabela.</li>
+						<li>td : Marca uma célula.</li>
+						<li>tr : Table row, define uma linha.</li>
+						<li>th : Célula específica do cabeçalho.</li>
+					</ul>
+					<p>A propriedade colspan pode definir o número de colunas que uma célula ocupa, possibilitando a junção de células da tabela.</p>
+					<div class="exemplo">
+						<table>
+							<thead>
+								<tr>
+									<th colspan="3">Cabeçalho</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Célula 1</td>
+									<td>Célula 2</td>
+									<td>Célula 3</td>
+								</tr>
+								<tr>
+									<td>Célula 4</td>
+									<td>Célula 5</td>
+									<td>Célula 6</td>
+								</tr>
+								<tr>
+									<td>Célula 7</td>
+									<td>Célula 8</td>
+									<td>Célula 9</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">Rodapé</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<h3>Espero ter ajudado!</h3>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>Resumo CSS</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Resumo básico de CSS:</h1>
+			<h2>CSS -> Cascade Style Sheet</h2>
+			<h4>Feito por Breno Morim</h4>
+		</header>
+		<nav>
+			<a class="ancora" href="resumo-html.html">Ir para resumo sobre HTML</a>
+			<a class="ancora" href="acessibilidade.html">Ir para resumo sobre acessibilidade</a>
+			<a class="perfil" href="">Acesse o meu perfil do GitHub para mais conteúdo!</a>
+		</nav>
+		<main>
+			<section class="mt-3">
+				<h2>Seleções:</h2>
+				<div>
+					<h3>Formas de usar CSS:</h3>
+					<ul>
+						<li>Em um arquivo local, importando com a tag link na head do HTML.</li>
+						<li>Importando uma biblioteca externa, como o Bootstrap, através do Node Package Manager ou do CDN deliver.</li>
+						<li>No próprio arquivo HTML, com a tag style, que fica na head.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Formas de selecionar elementos:</h3>
+					<ul>
+						<li>inline : Em um elemento específico, com a propriedade style.</li>
+						<li>class : Aplicando uma classe no elemento.</li>
+						<li>id : Usando a Identificação.</li>
+						<li>Selecionando de acordo com a tag do elemento.</li>
+					</ul>
+					<p>Na nomenclatura de classes, é bom que sejamos o mais específicos e genéricos ao mesmo tempo. Se formos muito específicos, não poderemos reutilizar o código. Caso formos muito genéricos, teremos que combinar classes para alcançar os resultados desejados.</p>
+					<div class="exemplo">
+						<h3>Força das seleções</h3>
+						<h4>Inline > Id > Class > Tags</h4>
+						<h5>Sendo que é possível combinar as seleções, usando a classe + tag, por exemplo, assim somando sua força.</h5>
+						<h5>O CSS com a seleção mais forte sobrepõe o com a seleção mais fraca.</h5>
+					</div>
+				</div>
+				<div>
+					<h3>Boas práticas:</h3>
+					<p>Usar classes nos ajuda a não repetir código e a termos um código mais organizado, mas quando vamos fazer algo muito específico e que não queremos repetir, pode ser melhor usar a seleção inline, principalmente quando não vamos escrever um código muito extenso, caso contrário é melhor usar o id. Uma diferença fundamental entre id e class é que usamos id para definir comportamento e class para estilo.</p>
+				</div>
+				<div>
+					<h3>Seletores avançados de CSS:</h3>
+					<ul>
+						<li>> : seleciona somente os filhos diretos de um elemento.</li>
+						<li>+ : seleciona o irmão mais próximo do elemento.</li>
+						<li>~ : seleciona todos os elementos seguintes.</li>
+						<li>:not() : seleciona elementos, declarando uma exceção.</li>
+					</ul>
+					<div class="exemplo">
+						<p>div > p -> seleciona todos o parágrafos que são filhos diretos de uma div.</p>
+						<p>h3 + p -> seleciona o parágrafo irmão de um título h3.</p>
+						<p>img ~ li -> seleciona todos os itens de listas que vêm depois de uma imagem.</p>
+						<p>div:not(.exemplo) -> seleciona todas as div que não possuem a classe exemplo.</p>
+					</div>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Cores, medidas e espaçamentos:</h2>
+				<div>
+					<h3>Cores:</h3>
+					<p>As cores podem ser definidas pelo nome em inglês, por código hexadecimal, ou seguindo o pardão RGB.</p>
+					<div class="exemplo">
+						<h4 style="color: #FFF">Cor Branca:</h4>
+						<h5>white - #FFFFFF ou #FFF (abreviado) - rgb(255, 255, 255)</h5>
+						<h5>RGB - rgb( valor da cor vermelha, verde e azul ), os valores variam de 0 a 255</h5>
+						<h5>Hex - #vermelho, verde e azul - valores que variam de 00 a FF.</h5>
+					</div>
+				</div>
+				<div>
+					<h3>Espaçamentos:</h3>
+					<ul>
+						<li>width: Largura do elemento.</li>
+						<li>margin : Espaçamento externo.</li>
+						<li>padding : Espaçamento interno.</li>
+						<li>border : Borda, devemos passar a espessura, o estilo (sólida, pontilhada, etc) e a cor.</li>
+						<li>border-radius : Arredonda os vértices da borda.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Unidades de medida:</h3>
+					<ul>
+						<li>% : Unidade proporcional, referente ao tamanho da tela.</li>
+						<li>px : Pixel, por não ser proporcional, pode não ser a mais unidade mais adequada pensando na acessibilidade e responsividade.</li>
+						<li>em : Unidade proporcional, referente ao valor padrão da fonte.</li>
+					</ul>
+					<div class="exemplo">
+						<p style="font-size: 24px;">Fonte com 24px</p>
+						<p style="font-size: 1.5em;">Fonte com 1.5em</p>
+						<p style="border: solid #222 3px; padding-bottom: 10%;">10% de padding para baixo.</p>
+						<p style="border: solid #222 3px; padding-bottom: 1.5em;">1.5em de padding para baixo.</p>
+						<p style="border: solid #222 3px; padding-bottom: 30px;">30px de padding para baixo.</p>
+					</div>
+				</div>
+				<div>
+					<h3>Cálculos com CSS:</h3>
+					<p>Embora seja uma funcionalidade usado somente em momentos muito específicos, existe a função calc no css, onde é possível fazer operações matemáticas. Exemplo:</p>
+					<div class="exemplo" style="width: calc(40% + 55px)">
+						<code class="codigo">
+							width: calc(40% + 55px);
+						</code>
+					</div>
+					<div class="exemplo ms-3" style="width: calc(10em + 20%)">
+						<code class="codigo">
+							width: calc(10em + 20%);
+						</code>
+					</div>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Texto e fonte:</h2>
+				<div>
+					<h3>Propriedades:</h3>
+					<ul>
+						<li>font-size : tamanho da fonte.</li>
+						<li>font-family : fonte utilizada, podemos importar fontes da API de fontes do Google.</li>
+						<li>font-style : estilo da fonte, italic (itálico) por exemplo.</li>
+						<li>font-weight : peso da fonte, bold (negrito) por exemplo.</li>
+						<li>color : cor da fonte.</li>
+						<li>text-align : alinhamento do texto (left, right, center e justify)</li>
+						<li>text-transform : altera o texto, uppercase - maiúsculo, lowercase - minúsculo, capitalize - somente a primeira letra maiúscula.</li>
+						<li>text-decoration : decoração do texto, underline (sublinhado) por exemplo.</li>
+						<li>line-height : altura da linha, que é proporcional à fonte. Aumento essa propriedade, é possível aumentar o espaçamento entre linhas.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Importando fontes:</h3>
+					<p>As fontes padrões não são as mais adequadas para a internet, pois em sua maioria, foram feitas pensando em textos impressos. Usar fontes externas pode padronizar o conteúdo em todos os navegadores, deixar a página mais agradável esteticamente, e ainda ganhamos mais alternativas.</p>
+					<p>É possível importar fontes da API Google Fonts, uma das mais usadas no mercado: <a href="https://fonts.google.com/">Google Fonts</a></p>
+					<div class="exemplo">
+						<h4>Depois de importar na head do HTML, basta usar no CSS:</h4>
+						<code class="codigo">
+							body {<br>
+							    font-family: 'Monstserrat', sans-serif;<br>
+							}
+						</code>
+					</div>
+				</div>
+				<div>
+					<h3>Caracteres especiais unicode:</h3>
+					<p>É possível usar caracteres unicode na sua página HTML, basta pesquisar na internet, copiar e colar. Veja alguns exemplos:</p>
+					<ul>
+						<li>Ψ</li>
+						<li>η</li>
+						<li>✦</li>
+						<li>⚝</li>
+						<li>🙂</li>
+						<li>め</li>
+						<li>さ</li>
+					</ul>
+					<p>Podemos colocar emojis, símbolos ou até caracteres de outros alfabetos no nosso site desse modo. É possível simplesmente copiar e colar símbolos ou usar um código HTML específico, que cada símbolo tem para utilizá-los.</p>
+					<p>Veja mais no site <a href="https://unicode-table.com/">Unicode Table</a></p>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Usando pseudo classes e elementos:</h2>
+				<div>
+					<h3>Pseudoclasses:</h3>
+					<ul>
+						<li>hover : Cursor sobre o elemento.</li>
+						<li>focus : Clique do mouse.</li>
+						<li>active : Clicar e segurar do mouse.</li>
+						<li>required : Elemento obrigatório.</li>
+						<li>first-child : Primeiro elemento filho.</li>
+						<li>last-child : Último elemento filho.</li>
+						<li>nth-child : Número n da lista.</li>
+					</ul>
+					<div class="exemplo p-4">
+						<code class="codigo">
+							#hover:hover {<br>
+								background-color: #FFF;<br>
+								color: #222;<br>
+							}<br>
+							 #focus:focus {<br>
+							 	background-color: lightcyan;<br>
+							 	color:  fuchsia;<br>
+							 } <br>
+							#active:active {<br>
+								background-color: floralwhite;<br>
+								color: firebrick;<br>
+							}<br>
+						</code>
+						<div class="row justify-content-center mt-3">
+							<button class="btn btn-dark col-3" id="hover">Hover</button>
+							<button class="btn btn-primary col-3 ms-3 me-3" id="focus">Focus</button>
+							<button class="btn btn-danger col-3" id="active">Active</button>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h3>Pseudoelementos no CSS:</h3>
+					<p>Podemos criar elementos que não existem no HTML com CSS, atribuindo classes por exemplo. Pseudoelementos criados com CSS existem somente de forma visual, não é possível selecioná-los com o mouse, por exemplo.</p>
+					<p>Alguns exemplos:</p>
+					<ul>
+						<li>first-letter : Primeira letra.</li>
+						<li>first-line : Primeira linha.</li>
+						<li>before : Podemos inserir algo no HTML antes do elemento.</li>
+						<li>after : Podemos inserir HTMl depois do elemento.</li>
+					</ul>
+					<div class="exemplo">
+						<h2 class="entre-parenteses">Colocando o texto entre parentêses:</h2>
+						<code class="codigo">
+							.entre-parenteses::before {<br>
+								content: "( ";<br>
+							}<br>
+							.entre-parenteses::after {<br>
+								content: " )";<br>
+							}<br>
+							.entre-parenteses::first-letter {<br>
+							font-weight: bold;<br>
+							}
+						</code>
+						<p class="primeira-em-negrito">Primeira letra em negrito.</p>
+						<p class="primeira-maior">Primeira letra maior.</p>
+						<code class="codigo">
+							.primeira-em-negrito::first-letter {<br>
+								font-weight: bold;<br>
+							}<br>
+							.primeira-maior::first-letter {<br>
+								font-size: 1.4em;<br>
+							}
+						</code>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Display e posicionamento:</h2>
+				<div>
+					<h3>A propriedade display:</h3>
+					<ul>
+						<li>none : desabilita a visualização do elemento.</li>
+						<li>inline : o elemento ocupa somente o seu tamanho original, não é possível alterar sua altura ou largura.</li>
+						<li>block : o elemento ocupa toda a largura da página.</li>
+						<li>inline-block : ocupa o espaço relativo ao seu próprio tamanho, podendo ser alterado com as propriedades height e width.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Posicionamento, a propriedade position:</h3>
+					<ul>
+						<li>static : Elementos posicionados de acordo com a ordem que aparecem no HTML.</li>
+						<li>absolute : Posição relativa ao seu antecessor mais próximo, o elemento fica por cima da apresentação.</li>
+						<li>fixed : Posição fixa na janela do navegador.</li>
+						<li>relative : Segue seu posicionamento normal, pode ser definido com as propriedades right, left, top e bottom.</li>
+						<li>sticky : Posição relativa à barra de rolagem do navegador.</li>
+					</ul>
+					<div style="margin-bottom: 90px;" class="exemplo">
+						<button style="position: absolute;" class="btn btn-dark">Absolute</button>
+					</div>
+					<div class="exemplo">
+						<button style="position: static;" class="btn btn-dark">Static</button>
+					</div>
+					<div class="exemplo">
+						<button class="btn btn-dark" style="position: relative; left: 15px; top: 10px;">Relative, com left: 15px e top: 10px</button>
+					</div>
+				</div>
+				<div>
+					<h3>Usando float:</h3>
+					<p>A propriedade float permite que "levantemos" um elemento, contudo afetando também os elementos posteriores, por isso devemos usar a propriedade clear para limpar o float.</p>
+					<div class="exemplo">
+						<img style="float: left;" class="m-2" src="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg" alt="Imagem de Exemplo" width="35%"/>
+						<h5>Usando float, é possível fazer com que outros elementos flutuem ao redor de outro.</h5>
+						<h5>Agora basta limpar o float no próximo elemento.</h5>
+						<code class="codigo" style="display: inline-block;">
+							/* Marcando o início do float */<br>
+							float: left;<br>
+							/* Limpando-o, passando qual o tipo de float deve ser limpo */<br>
+							clear: left;<br>
+						</code>
+					</div>
+				</div>
+			</section>
+			<section style="clear: left;" class="mt-3">
+				<h2>Degradês e opacidade:</h2>
+				<div>
+					<h3>Degradês em CSS:</h3>
+					<p>É possível fazer muitas coisas com essa funcionalidade, podemos passar quantas cores quisermos, ângulo de inclinação e até mesmo qual a porcentagem que cada cor deverá ocupar.</p>
+					<p>Aplicando o degradê no background:</p>
+					<div class="exemplo degrade">
+						<code class="codigo">
+							.degrade {<br>
+								<br>
+								background: linear-gradient(grey, lightgrey, white);<br><br>
+							}<br>
+						</code>
+					</div>
+					<div class="exemplo degrade-vertical">
+						<code class="codigo">
+							.degrade-vertical {<br>
+								<br>
+								background: linear-gradient(90deg, grey, lightgrey, white);<br><br>
+							}<br>
+						</code>
+					</div>
+					<div class="exemplo degrade-circular">
+						<code class="codigo">
+							.degrade-circular {<br>
+								<br>
+								background: radial-gradient(lightgrey, white);<br><br>
+							}<br>
+						</code>
+					</div>
+					<div class="exemplo arco-iris col-12">
+						<h2 style="text-align: center;">Fazendo um Arco Íris com Degradê:</h2>
+					</div>
+					<div class="exemplo">
+						<code class="codigo">
+							.arco-iris {<br>
+								background: linear-gradient(90deg, red, orange, yellow, green, blue, darkblue, violet);<br>
+							}
+						</code>
+					</div>
+				</div>
+				<div>
+					<h3>Opacidade e alinhamento</h3>
+					<ul>
+						<li>opacity : podemos diminuir a visibilidade do elemento.</li>	
+						<li>rgba : podemos definir uma cor com opacidade.</li>
+						<li>vertical-align : é possível alterar o alinhamento padrão.</li>
+					</ul>
+					<div class="exemplo">
+						<img style="opacity: 50%;" class="m-2" src="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg" alt="Imagem de Exemplo" width="35%"/>
+						<span style="vertical-align: top;color: rgba(0,0,0,60%);"><b>opacity: 50%; vertical-align: top; color: rgba(0,0,0,60%)</b></span>
+					</div>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Transition, transform e responsividade:</h2>
+				<div>
+					<h3>Transições:</h3>
+					<p>Com a propriedade transition, é possível fazer com que uma mudança ocorra de forma gradual, precisamos definir o tempo da transição e qual a transformação.</p>
+					<div class="exemplo">
+						<code class="codigo m-3" style="display: block;">
+						#botao-transicao {<br>
+							transition: 1.5s all;<br>
+						}<br>
+						#botao-transicao:hover {<br>
+							background-color: #FFF;<br>
+							color: #222;<br>
+						}
+						</code>
+						<div class="row justify-content-center">
+							<button class="btn btn-dark col-4" style="font-size: 1.2em;" id="botao-transicao">Botão</button>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h3>Transformações:</h3>
+					<p>Usando CSS, é possível fazer algumas transformações nos elementos a partir de certos eventos (pseudoclasses). Podemos, por exemplo, rotacionar o elemento, aumentar seu tamanho e entre outros.</p>
+					<div class="col-12">
+					<div class="exemplo transformar scale">
+						<h4>Aumentando o tamanho</h4>
+					</div>
+					</div>
+					<div class="col-12">
+					<div class="exemplo transformar rotate">
+						<h4>Rotacionando elemento.</h4>
+					</div>
+					</div>	
+					<div class="exemplo">
+						<code class="codigo">
+							.transformar {<br>
+								transition: 1.5s all;<br>
+							}<br>
+							.scale:hover {<br>
+								transform: scale(1.2);<br>
+							}<br>
+							.rotate:hover {<br>
+								transform: rotate(360deg);<br>
+							}
+						</code>
+					</div>
+				</div>
+				<div>
+					<h3>Fazendo adaptações para celulares:</h3>
+					<p>É possível fazer adaptações na visualização dependendo das dimensões da tela do dispositivo:</p>
+					<div class="exemplo">
+						<p>Precisamos, antes de tudo, definir uma nova tag meta na head do html, com as propriedades name="viewport" e content="width=device-width", assim fazendo com que a largura da página seja igual à largura da tela do dispositivo.</p>
+						<p>Depois, basta fazer as alterações no CSS:</p>
+						<code class="codigo">
+							@media screen and (max-width: 480px) {<br>
+							/* Definindo propriedades diferentes para telas com até 480 px de largura */<br>
+						}
+						</code>
+					</div>
+				</div>
+			</section>
+			<section class="mt-3">
+				<h2>Sombreamento:</h2>
+				<div>
+					<h3>Aplicando sombras:</h3>
+					<p>Para sombrear um elemento, basta utilizarmos a propriedade box-shadow, que recebe o valor no eixo X (horizontal), eixo Y (vertical), blur (espalhamento), intensidade da borda e a cor.</p>
+					<div class="exemplo m-3" style="box-shadow: 10px 10px #222;">
+						<code class="codigo">
+							box-shadow: 10px 10px #222; /* sem transparência na sombra */
+						</code>
+					</div>
+					<div class="exemplo m-3" style="box-shadow: -10px -10px 15px #222;">
+						<code class="codigo">
+							box-shadow: -10px -10px 15px #222; /* com blur de 15px e aplicando coordenadas X e Y negativas */
+						</code>
+					</div>
+					<div class="exemplo m-3" style="box-shadow: 10px 10px 15px 5px #222;">
+						<code class="codigo">
+							box-shadow: 10px 10px 15px 5px #222; /* Intensidade de borda em 5px */
+						</code>
+					</div>
+					<div class="exemplo mt-4 m-3" style="box-shadow: 10px 10px #222, -10px -10px #CDCD;">
+						<code class="codigo">
+							box-shadow: 10px 10px #222, -10px -10px #CDCD; /* colocando mais de uma sombra no elemento */
+						</code>
+					</div>
+					<div class="exemplo m-3" style="box-shadow: inset 0 0 20px #AAA;">
+						<code class="codigo">
+							box-shadow: inset 0 0 20px #AAA; /* sombra interna */
+						</code>
+					</div>
+					<div class="exemplo m-3" style="text-shadow: 1px 1px green;">
+						<code class="codigo">
+							text-shadow: 1px 1px green; /* sombras em textos */
+						</code>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<h3>Espero ter ajudado!</h3>
+		</footer>
+	</div>
+</body>
+</html>	
