@@ -172,6 +172,60 @@
 					</div>
 				</div>
 			</section>
+			<section>
+				<h2>Pessoas com deficiência visual:</h2>
+				<div>
+					<h3>O atributo lang:</h3>
+						<p>Atributo que define a linguagem de determinado elemento, em leitores de tela, muda o sotaque utilizado, assim é fundamental marcar devidamente a linguagem que está sendo utilizada no momento. Lembre-se também de escrever corretamente e respeitar as regras de acentuação e ortografia.
+						</p>
+						<div class="exemplo">
+							<p>Perceba como fica estranho usar o leitor de tela com as langs invertidas:</p>
+							<p lang="pt-br"><b>This has been written in English.</b></p>
+							<p lang="en"><b>Isto está escrito em português do Brasil.</b></p>
+						</div>
+				</div>
+				<div>
+					<h3>Imagens:</h3>
+					<ul>
+						<li>Descreva as imagens devidamente com o atributo alt, isto é, se elas possuírem um significado maior, além do visual. Tentar descrever os sentimentos que queremos passar com a imagem é uma boa prática para acessibilidade. Outra função desse atributo é descrever a foto caso algum problema aconteça e ela não consiga ser renderizada.</li>
+						<li>Evite começar a escrever o alt com palavras como Imagem, Ícone, Foto e entre outras, pois os leitores de tela normalmente já avisam de que se trata de uma imagem, assim ficando redundante. Ainda assim, é válido dizer quando trata-se de um desenho ou ilustração.</li>
+						<li>Quando temos uma imagem dentro de um link, a descrição com o alt acaba não sendo possível, para resolver esse problema, podemos utilizar o atributo title. Também é podemos usar title e alt ao mesmo tempo em uma imagem, contudo isso provavelmente irá dificultar o entendimento ao invés de ajudar.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Semântica das tags:</h3>
+					<ul>
+						<li>Evite usar vários h1s na mesma página, procure usar tags que melhor definam o que você deseja expressar e organizar de acordo com o que é mais importante.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Influência do CSS:</h3>
+					<p>O CSS pode interferir na forma como os leitores de tela leêm a página, por exemplo:</p>
+					<ul>
+						<li>Listas: a propriedade list-style influencia na leitura, usar disc, por exemplo, faz com que o leitor leia 'bolinha'. Para evitar isso, podemos usar pseudoelementos CSS.</li>
+						<li>Escondendo elementos: as propriedades display: none e visibility: hidden escondem os elementos não só visualmente, mas também para os leitores de tela. Podemos substituí-las por opacity: 0 ou position: absolute; left: -9999px;</li>
+					</ul>
+					<div class="exemplo">
+						<ul class="listaComListStyle">
+							<li>Lista com list-style</li>
+						</ul>
+						<ul class="listaComPseudoelemento">
+							<li>Lista com pseudoelemento</li>
+						</ul>
+						<code class="codigo">
+							.listaComListStyle {<br>
+								list-style: disc;<br>
+							}<br>
+							.listaComListStyle li::before {<br>
+								content: "";<br>
+							}<br>
+							.listaComPseudoelemento li::before {<br>
+								content: "• ";<br>
+							}<br>
+						</code>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer>
 			<h3>Espero ter ajudado!</h3>

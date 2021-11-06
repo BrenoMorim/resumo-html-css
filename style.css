@@ -59,6 +59,12 @@ footer {
 main div {
 	margin: 15px 0;
 }
+main div ul {
+	list-style: none;
+}
+main div li::before {
+	content: "• ";
+}
 main div p, li {
 	font-size: 22px;
 	color: #222;
@@ -184,6 +190,15 @@ main div a {
 }
 .rotate:hover {
 	transform: rotate(360deg);
+}
+.listaComListStyle {
+	list-style: disc;
+}
+.listaComListStyle li::before {
+	content: "";
+}
+.listaComPseudoelemento li::before {
+	content: "• ";
 }
 footer {
 	text-align: center;
