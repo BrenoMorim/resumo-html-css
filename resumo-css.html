@@ -15,13 +15,30 @@
 			<h2>CSS -> Cascade Style Sheet</h2>
 			<h4>Feito por Breno Morim</h4>
 		</header>
-		<nav>
-			<a class="ancora" href="resumo-html.html">Ir para resumo sobre HTML</a>
-			<a class="ancora" href="acessibilidade.html">Ir para resumo sobre acessibilidade</a>
+		<nav role="navigation">
 			<a class="perfil" href="https://github.com/BrenoMorim">Acesse o meu perfil do GitHub para mais conteúdo!</a>
+			<a class="voltarAoTopo" href="#"><span>🠕</span> Voltar ao topo</a>
+			<div class="tabelaDeConteudo">
+				<h3>Outras páginas</h3>
+				<ul>
+					<li><a class="ancora" href="resumo-html.html">Resumo sobre HTML</a></li>
+					<li><a class="ancora" href="acessibilidade.html">Resumo sobre acessibilidade</a></li>
+				</ul>
+				<h3 class="mt-3">Tabela de Conteúdos: </h3>
+				<ul>
+					<li><a class="ancora" href="#selecoes">Seleções</a></li>
+					<li><a class="ancora" href="#coresMedidasEspacamentos">Cores, medidas e espaçamentos</a></li>
+					<li><a class="ancora" href="#textoEFonte">Texto e fonte</a></li>
+					<li><a class="ancora" href="#pseudoclasses">Pseudoclasses e elementos</a></li>
+					<li><a class="ancora" href="#displayEPosicionamento">Display e posicionamento</a></li>
+					<li><a class="ancora" href="#degradesOpacidade">Degradê e opacidade</a></li>
+					<li><a class="ancora" href="#responsividade">Transforms, transitions e responsividade</a></li>
+					<li><a class="ancora" href="#sombras">Sombreamento</a></li>
+				</ul>
+			</div>
 		</nav>
-		<main>
-			<section class="mt-3">
+		<main role="main">
+			<section id="selecoes" class="mt-3">
 				<h2>Seleções:</h2>
 				<div>
 					<h3>Formas de usar CSS:</h3>
@@ -67,7 +84,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="mt-3">
+			<section id="coresMedidasEspacamentos" class="mt-3">
 				<h2>Cores, medidas e espaçamentos:</h2>
 				<div>
 					<h3>Cores:</h3>
@@ -120,7 +137,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="mt-3">
+			<section id="textoEFonte" class="mt-3">
 				<h2>Texto e fonte:</h2>
 				<div>
 					<h3>Propriedades:</h3>
@@ -165,7 +182,7 @@
 					<p>Veja mais no site <a href="https://unicode-table.com/">Unicode Table</a></p>
 				</div>
 			</section>
-			<section class="mt-3">
+			<section id="pseudoclasses" class="mt-3">
 				<h2>Usando pseudo classes e elementos:</h2>
 				<div>
 					<h3>Pseudoclasses:</h3>
@@ -236,14 +253,14 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="displayEPosicionamento">
 				<h2>Display e posicionamento:</h2>
 				<div>
 					<h3>A propriedade display:</h3>
 					<ul>
 						<li>none : desabilita a visualização do elemento.</li>
 						<li>inline : o elemento ocupa somente o seu tamanho original, não é possível alterar sua altura ou largura.</li>
-						<li>block : o elemento ocupa toda a largura da página.</li>
+						<li>block : o elemento ocupa toda a largura do seu elemento pai.</li>
 						<li>inline-block : ocupa o espaço relativo ao seu próprio tamanho, podendo ser alterado com as propriedades height e width.</li>
 					</ul>
 				</div>
@@ -282,7 +299,7 @@
 					</div>
 				</div>
 			</section>
-			<section style="clear: left;" class="mt-3">
+			<section id="degradesOpacidade" style="clear: left;" class="mt-3">
 				<h2>Degradês e opacidade:</h2>
 				<div>
 					<h3>Degradês em CSS:</h3>
@@ -336,7 +353,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="mt-3">
+			<section id="responsividade" class="mt-3">
 				<h2>Transition, transform e responsividade:</h2>
 				<div>
 					<h3>Transições:</h3>
@@ -397,7 +414,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="mt-3">
+			<section id="sombras" class="mt-3">
 				<h2>Sombreamento:</h2>
 				<div>
 					<h3>Aplicando sombras:</h3>

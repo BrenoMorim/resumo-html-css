@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width"/>
@@ -15,13 +15,29 @@
 			<h2>Como tornar seu site mais acessível.</h2>
 			<h4>Feito por Breno Morim</h4>
 		</header>
-		<nav>
-			<a class="ancora" href="resumo-html.html">Ir para resumo sobre HTML</a>
-			<a class="ancora" href="resumo-css.html">Ir para resumo sobre CSS</a>
+		<nav role="navigation">
 			<a class="perfil" href="https://github.com/BrenoMorim">Acesse o meu perfil do GitHub para mais conteúdo!</a>
+			<a class="voltarAoTopo" href="#"><span>🠕</span> Voltar ao topo</a>
+			<div class="tabelaDeConteudo">
+				<h3>Outras páginas</h3>
+				<ul>
+					<li><a class="ancora" href="resumo-html.html">Resumo sobre HTML</a></li>
+					<li><a class="ancora" href="resumo-css.html">Resumo sobre CSS</a></li>
+				</ul>
+				<h3 class="mt-3">Tabela de Conteúdos: </h3>
+				<ul>
+					<li><a class="ancora" href="#introducao">Introdução</a></li>
+					<li><a class="ancora" href="#autismo">Autismo</a></li>
+					<li><a class="ancora" href="#surdez">Surdez</a></li>
+					<li><a class="ancora" href="#dislexia">Dislexia</a></li>
+					<li><a class="ancora" href="#baixaVisao">Baixa visão</a></li>
+					<li><a class="ancora" href="#deficienciasFisicas">Deficiências físicas</a></li>
+					<li><a class="ancora" href="#deficienciaVisual">Deficiência visual</a></li>
+				</ul>
+			</div>
 		</nav>
-		<main>
-			<section class="mt-3">
+		<main role="main">
+			<section id="introducao" class="mt-3">
 				<h2>Introdução</h2>
 				<div>
 					<h3>Por que pensar em acessibilidade?</h3>
@@ -36,7 +52,7 @@
 					<p>Os padrões são estabelecidos na WCAG - Diretrizes de Acessibilidade para Conteúdo Web. Essas diretrizes são determinadas pela organização W3C: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Site da W3C</a>.</p>
 				</div>
 			</section>
-			<section class="mt-3">
+			<section id="autismo" class="mt-3">
 				<h2>Autismo:</h2>
 				<div>
 					<h3>O que é?</h3>
@@ -70,7 +86,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="surdez">
 				<h2>Surdez:</h2>
 				<div>
 					<h3>Trocar textos mais longos por imagens:</h3>
@@ -81,7 +97,7 @@
 					<p>Quando queremos colocar um vídeo na página, é importante verificar se o vídeo tem legendas. Isso é importante não só para a inclusão de pessoas com deficiência auditiva, mas também por uma questão de comodidade, às vezes, quando estamos em público ou não temos um fone à disposição pode ser preferível assistir o vídeo pela legenda.</p>
 				</div>
 			</section>
-			<section>
+			<section id="dislexia">
 				<h2>Dislexia:</h2>
 				<div>
 					<h3>O que é a dislexia?</h3>
@@ -121,7 +137,7 @@
 					<p>Colocar vídeos de fundo pode tirar a atenção de pessoas neurotípicas no geral, dificultando ainda mais a leitura. É preferível tirar um print do vídeo e colocar de fundo.</p>
 				</div>
 			</section>
-			<section>
+			<section id="baixaVisao">
 				<h2>Baixa visão:</h2>
 				<div>
 					<h3>Contraste e fonte mínima</h3>
@@ -134,13 +150,14 @@
 				<div>
 					<h3>Informações escondidas e zoom</h3>
 					<p>Procure deixar todas as informações necessárias no seu site, evite fazer com que o usuário tenha que baixar um pdf ou algo do tipo, pois isso pode dificultar a navegação. É importante lembrar que o zoom, principalmente no celular, é uma ferramenta fundamental para qualquer pessoa que apresenta alguma dificuldade na visão, por isso nunca bloqueie o zoom dos usuários.</p>
+					<p>initial-scale=1.0, maximum-scale=1.0, user-scalable=no : Essas propriedades que podem ser colocadas na tag meta viewport da head bloqueiam o zoom da página para usuários mobiles, portanto jamais faça isso.</p>
 				</div>
 				<div>
 					<h3>Daltonismo</h3>
 					<p>Pensando em pessoas com daltonismo, é importante não passar informação somente por cor e dar mensagens de erro descritivas, pois é possível que a pessoa não consiga discernir o vermelho do verde, portanto só a mudança de cor em caso de erro em formulários não seria suficiente, por exemplo.</p>
 				</div>
 			</section>
-			<section>
+			<section id="deficienciasFisicas">
 				<h2>Deficiências físicas:</h2>
 				<div>
 					<h3>Pontos importantes:</h3>
@@ -172,7 +189,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="deficienciaVisual">
 				<h2>Pessoas com deficiência visual:</h2>
 				<div>
 					<h3>O atributo lang:</h3>
@@ -223,6 +240,47 @@
 								content: "• ";<br>
 							}<br>
 						</code>
+					</div>
+				</div>
+				<div>
+					<h3>Melhorando a navegação:</h3>
+					<p>É importante pensar na navegação para pessoas que necessitam de um teclado ou adaptador para navegar na internet, por isso dê a opção de pular menus de navegação e ir direto para o conteúdo e organize bem uma tabela de conteúdos para seu site.</p>
+				</div>
+				<div>
+					<h3>WAI-ARIA:</h3>
+					<p>API da W3 criada para facilitar a acessibilidade, com a definição de roles, states e properties.</p>
+					<p><b>Principais roles:</b></p>
+					<ul>
+						<li>banner : referente ao header, onde normalmente ficam logo, barra de pesquisa, etc.</li>
+						<li>main : conteúdo principal, correspondente à tag main.</li>
+						<li>complementary : conteúdo complementar, corresponde à tag aside.</li>
+						<li>search : corresponde ao componente de pesquisa.</li>
+						<li>contentinfo : refere-se a informações extras, normalmente corresponde ao footer.</li>
+					</ul>
+					<p><b>State:</b></p>
+					<ul>
+						<li>Define o estado atual de um elemento.</li>
+						<li>Exemplo: input aria-invalid="true", dirá ao leitor de tela que o input está invalido.</li>
+					</ul>
+					<p><b>Algumas properties:</b></p>
+					<ul>
+						<li>aria-haspopup="true" : avisa que um botão chama um pop-up.</li>
+						<li>aria-label : rótulo a ser mostrado no leitor de tela.</li>
+						<li>aria-labelledby : informa que elemento está rotulando este, funciona de forma parecida com o label - input ligados com for - id.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Formulários:</h3>
+					<p>Não se esqueça de usar placeholders e labels ligados a inputs com for e id, essas boas práticas facilitam a utilização para pessoas que usam leitores de tela. Outro ponto considerável é que inputs disabled não podem ser focados por eles, então caso o campo esteja certo, pode ser melhor colocá-lo como readonly ao invés de disabled.</p>
+					<div class="exemplo">
+						<form class="form-group">
+							<label for="normal">Input normal</label>
+							<input type="text" class="form-control" placeholder="Input comum" id="normal" />
+							<label for="desabilitado">Input desabilitado</label>
+							<input type="text" class="form-control" value="disabled" id="desabilitado" disabled />
+							<label for="soLeitura">Input apenas para leitura</label>
+							<input type="text" class="form-control" value="readonly" id="soLeitura" readonly />
+						</form>
 					</div>
 				</div>
 			</section>
