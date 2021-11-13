@@ -237,6 +237,16 @@ main div a {
 .listaComPseudoelemento li::before {
 	content: "• ";
 }
+:root {
+	--branco: #FFF;
+	--fonte-sans: sans-serif;
+	--rosa: #F0F; 
+}
+.exemplo-variaveis {
+	font-family: var(--fonte-sans);
+	background-color: var(--rosa);
+	color: var(--branco);
+}
 footer {
 	text-align: center;
 	margin-top:  1.5em;

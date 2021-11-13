@@ -12,7 +12,7 @@
 	<div class="container">
 		<header>
 			<h1>Resumo básico de CSS:</h1>
-			<h2>CSS -> Cascade Style Sheet</h2>
+			<h2>CSS -> Cascading Style Sheet</h2>
 			<h4>Feito por Breno Morim</h4>
 		</header>
 		<nav role="navigation">
@@ -99,7 +99,9 @@
 				<div>
 					<h3>Espaçamentos:</h3>
 					<ul>
-						<li>width: Largura do elemento.</li>
+						<li>width : Largura do elemento.</li>
+						<li>height : Altura do elemento.</li>
+						<li>max-width e max-height : Definem uma largura e altura máxima.</li>
 						<li>margin : Espaçamento externo.</li>
 						<li>padding : Espaçamento interno.</li>
 						<li>border : Borda, devemos passar a espessura, o estilo (sólida, pontilhada, etc) e a cor.</li>
@@ -111,7 +113,10 @@
 					<ul>
 						<li>% : Unidade proporcional, referente ao tamanho da tela.</li>
 						<li>px : Pixel, por não ser proporcional, pode não ser a mais unidade mais adequada pensando na acessibilidade e responsividade.</li>
-						<li>em : Unidade proporcional, referente ao valor padrão da fonte.</li>
+						<li>em : Unidade proporcional, referente ao tamanho da fonte do elemento pai. EM significa ephemeral (efêmero), que muda.</li>
+						<li>rem : Unidade relativa ao tamanho da fonte do elemento raiz (html). REM significa root ephemeral, que muda porém a partir da raiz.</li>
+						<li>vw : Unidade referente ao tamanho da largura da tela - viewport width.</li>
+						<li>vh : Unidade referente ao tamanho da altura da tela - viewport height.</li>
 						<li>9999px: Valor infinito do CSS.</li>
 					</ul>
 					<div class="exemplo">
@@ -134,6 +139,25 @@
 						<code class="codigo">
 							width: calc(10em + 20%);
 						</code>
+					</div>
+				</div>
+				<div>
+					<h3>Variáveis com CSS:</h3>
+					<p>Para simplificar o código e evitar problemas com refatorações e mudanças de tema, podemos usar variáveis no CSS, instanciando-as com --nome-da-variavel: valor; e depois as utilizando com var(--nome-da-variavel).</p>
+					<div class="exemplo">
+						<code class="codigo">
+							:root {<br>
+								--branco: #FFF;<br>
+								--fonte-sans: sans-serif;<br>
+								--rosa: #F0F;<br>
+							}<br>
+							.exemplo-variaveis {<br>
+								font-family: var(--fonte-sans);<br>
+								background-color: var(--rosa);<br>
+								color: var(--branco);<br>
+							}<br>
+						</code>
+						<button class="btn exemplo-variaveis">Exemplo de variáveis com CSS.</button>
 					</div>
 				</div>
 			</section>
