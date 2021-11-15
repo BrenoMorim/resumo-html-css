@@ -18,7 +18,7 @@
 		<nav role="navigation">
 			<a class="perfil" href="https://github.com/BrenoMorim">Acesse o meu perfil do GitHub para mais conteúdo!</a>
 			<a class="voltarAoTopo" href="#"><span>🠕</span> Voltar ao topo</a>
-			<div class="tabelaDeConteudo">
+			<summary class="tabelaDeConteudo">
 				<h3>Outras páginas</h3>
 				<ul>
 					<li><a class="ancora" href="resumo-css.html">Resumo sobre CSS</a></li>
@@ -32,8 +32,9 @@
 					<li><a class="ancora" href="#relacoesExternas">Conteúdo externo</a></li>
 					<li><a class="ancora" href="#formularios">Botões e formulários</a></li>
 					<li><a class="ancora" href="#tabelas">Tabelas</a></li>
+					<li><a class="ancora" href="#emmet">Emmet</a></li>
 				</ul>
-			</div>
+			</summary>
 		</nav>
 		<main role="main">
 			<section id="inicio" class="mt-4">
@@ -79,6 +80,7 @@
 						<li>article : Usada para delimitar o conteúdo referente a um artigo.</li>
 						<li>aside : Um adendo qualquer, usamos quando queremos passar uma observação, por exemplo. A tradução para 'aside' é 'à parte'.</li>
 						<li>figure : Demarca um espaço para uma tag img, que pode ter uma legenda representada pela tag figcaption.</li>
+						<li>address : Contém conteúdo referente ao endereço e contato da página</li>
 					</ul>
 				</div>
 				<div>
@@ -137,7 +139,7 @@
 				<div>
 					<h3>Tags básicas:</h3>
 					<ul>
-						<li>a : Âncora, define um link que redireciona para outra página.</li>
+						<li>a : Âncora, define um link que redireciona para outra página, também pode redirecionar para um elemento da página, marcado com o id, ou também telefones e emails.</li>
 						<li>img : Imagem, que pode ser importada de um endereço na web, ou de um arquivo local, passando o caminho dos diretórios e o nome do arquivo, a propriedade src define a fonte e alt mostra uma visualização alternativa, contribuindo com a acessibilidade.</li>
 						<li>iframe : É como uma incorporação de uma janela de outro site, como apresentações do powerpoint, páginas do facebook, fotos do Instagram, mapas, vídeos do YouTube e de outras plataformas e entre outras formas de conteúdo. Esses conteúdos possuem um código de incorporação, que pode ser copiado e colado no seu código html.</li>
 						<li>video : Tag específica para vídeos, pode ser complementada com a tag track:</li>
@@ -145,11 +147,11 @@
 					</ul>
 					<div class="exemplo col-12">
 						<p style="text-align: center;"><a href="https://www.alura.com.br">Site da Alura</a></p>
-						<figure class="video">
-							<img width="80%" src="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg" alt="Wallpaper do Windows, imagem usada de exemplo">
+						<figure>
+							<img class="video" src="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg" alt="Wallpaper do Windows, imagem usada de exemplo">
 						</figure>
 						<div class="video">
-							<iframe width="100%" height="480" src="https://www.youtube.com/embed/nLPssMXOExM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: inline-block;"></iframe>
+							<iframe src="https://www.youtube.com/embed/nLPssMXOExM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: inline-block;"></iframe>
 						</div>
 					</div>
 				</div>
@@ -298,10 +300,53 @@
 					</div>
 				</div>
 			</section>
+			<section id="emmet">
+				<h2>Abreviações Emmet</h2>
+				<p>Quando escrevemos HTML, algumas vezes precisamos repetir várias vezes um mesmo elemento com uma ou mais classes, o que pode ser um pesadelo se escrevermos na mão. Para facilitar isso, existe o Emmet, que permite que escrevamos HTML de forma mais fácil e rápida, com a tecla de atalho Ctrl + espaço.</p>
+				<ul>
+					<li>As operações básicas do Emmet são:</li>
+					<li>> : Cria um elemento filho.</li>
+					<li>+ : Cria elemento irmão.</li>
+					<li>. : Adiciona uma classe, sendo que pode ser usado várias vezes.</li>
+					<li># : Inclui um id.</li>
+					<li>* : Permite que criemos n elementos iguais.</li>
+					<li>Veja alguns exemplos:</li>
+				</ul>
+				<div class="exemplo">
+					<code class="codigo">section#emmet.container>h2+p+(ul>li*3)+div.exemplo>p+p#emmet</code>
+					<p>Essa abreviação emmet cria o seguinte código:</p>
+					<code class="codigo" id="abreviacaoEmmet">
+					</code>
+				</div>
+			</section>
 		</main>
 		<footer>
 			<h3>Espero ter ajudado!</h3>
 		</footer>
 	</div>
+	<script>
+		let emmet = document.querySelector("#abreviacaoEmmet");
+		console.log(emmet);
+		let codigo = [
+		'<section id="emmet" class="container">',
+		'<h2></h2>',
+		'<p></p>',
+		'	<ul>',
+		'		<li></li>',
+		'		<li></li>',
+		'		<li></li>',
+		'	</ul>',
+		'	<div class="exemplo">',
+		'		<p></p>',
+		'		<p id="emmet"></p>',
+		'	</div>',
+		'</section>'];
+	codigo.forEach(linha => {
+		let span = document.createElement('span');
+		span.textContent = linha;
+		span.classList.add("linhaCodigo")
+		emmet.appendChild(span);
+	});
+	</script>
 </body>
 </html>

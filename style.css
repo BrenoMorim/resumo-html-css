@@ -47,6 +47,8 @@ nav ul {
 	color: #222;
 	padding: 1.1em;
 	box-shadow: #999 6px 6px 7px;
+	list-style: none;
+	cursor: default;
 }
 .tabelaDeConteudo h3::before {
 	content: "• ";
@@ -189,7 +191,16 @@ main div a {
 	font-weight: bold;
 }
 .video {
-	margin: 1.5em auto;
+	margin: 0 auto;
+	max-width: 360px;
+	width: 85vw;
+}
+.video iframe {
+	margin: 0 auto;
+	max-width: 600px;
+	width: 85vw;
+	height: 40vh;
+	max-height: 400px;
 }
 .mapa {
 	padding: 0 3em;
@@ -246,6 +257,11 @@ main div a {
 	font-family: var(--fonte-sans);
 	background-color: var(--rosa);
 	color: var(--branco);
+}
+.linhaCodigo {
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 footer {
 	text-align: center;
