@@ -302,21 +302,26 @@
 			</section>
 			<section id="emmet">
 				<h2>Abreviações Emmet</h2>
-				<p>Quando escrevemos HTML, algumas vezes precisamos repetir várias vezes um mesmo elemento com uma ou mais classes, o que pode ser um pesadelo se escrevermos na mão. Para facilitar isso, existe o Emmet, que permite que escrevamos HTML de forma mais fácil e rápida, com a tecla de atalho Ctrl + espaço.</p>
-				<ul>
-					<li>As operações básicas do Emmet são:</li>
-					<li>> : Cria um elemento filho.</li>
-					<li>+ : Cria elemento irmão.</li>
-					<li>. : Adiciona uma classe, sendo que pode ser usado várias vezes.</li>
-					<li># : Inclui um id.</li>
-					<li>* : Permite que criemos n elementos iguais.</li>
-					<li>Veja alguns exemplos:</li>
-				</ul>
-				<div class="exemplo">
-					<code class="codigo">section#emmet.container>h2+p+(ul>li*3)+div.exemplo>p+p#emmet</code>
-					<p>Essa abreviação emmet cria o seguinte código:</p>
-					<code class="codigo" id="abreviacaoEmmet">
-					</code>
+				<div>
+					<p>Quando escrevemos HTML, algumas vezes precisamos repetir várias vezes um mesmo elemento com uma ou mais classes, o que pode ser um pesadelo se escrevermos na mão. Para facilitar isso, existe o Emmet, que permite que escrevamos HTML de forma mais fácil e rápida, com a tecla de atalho Ctrl + espaço + Enter.</p>
+					<ul>
+						<li>As operações básicas do Emmet são:</li>
+						<li>> : Cria um elemento filho.</li>
+						<li>+ : Cria elemento irmão.</li>
+						<li>. : Adiciona uma classe, sendo que pode ser usado várias vezes.</li>
+						<li># : Inclui um id.</li>
+						<li>* : Permite que criemos n elementos iguais.</li>
+						<li>() : Os parentêses assim como na matemática, ajudam a organizar o código e indicar qual parte deve ser executada primeiro.</li>
+						<li>{} : Colocam um conteúdo de texto dentro da tag.</li>
+						<li>[] : Podem ser usados para colocar atributos dentro da tag.</li>
+						<li>Veja alguns exemplos:</li>
+					</ul>
+					<div class="exemplo">
+						<code class="codigo">section#emmet.container>h2{Título}+input.form-control[disabled placeholder="input"]+(ul>li*3)+div.exemplo>p#emmet</code>
+						<p>Essa abreviação emmet cria o seguinte código:</p>
+						<code class="codigo" id="abreviacaoEmmet">
+						</code>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -326,18 +331,16 @@
 	</div>
 	<script>
 		let emmet = document.querySelector("#abreviacaoEmmet");
-		console.log(emmet);
 		let codigo = [
 		'<section id="emmet" class="container">',
-		'<h2></h2>',
-		'<p></p>',
+		'<h2>Título</h2>',
+		'<input type="text" class="form-control" disabled="disabled" placeholder="input">',
 		'	<ul>',
 		'		<li></li>',
 		'		<li></li>',
 		'		<li></li>',
 		'	</ul>',
 		'	<div class="exemplo">',
-		'		<p></p>',
 		'		<p id="emmet"></p>',
 		'	</div>',
 		'</section>'];

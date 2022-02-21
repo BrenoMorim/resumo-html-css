@@ -263,6 +263,23 @@ main div a {
 	margin: 0;
 	padding: 0;
 }
+article h4 {
+	color: darkgreen;
+	margin-top: 1.5rem;
+	font-weight: 600;
+}
+.flex {
+	display: flex;
+}
+.quadrado {
+	width: 150px;
+	height: 30px;
+	color: #EEE;
+	display: inline-block;
+	background-color: firebrick;
+	border-radius: 1rem;
+	margin: 0.5rem 1rem;
+}
 footer {
 	text-align: center;
 	margin-top:  1.5em;
