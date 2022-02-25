@@ -271,6 +271,52 @@ article h4 {
 .flex {
 	display: flex;
 }
+.grid {
+	display: grid;
+}
+.grid div {
+	background-color: darkgreen;
+	color: #FFFFFF;
+	font-weight: 600;
+	text-align: center;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+.grid-area {
+	display: grid;
+	grid-template-areas: 'vermelho vermelho vermelho vermelho'
+						 'azul verde verde verde'
+						 'azul verde verde verde'
+						 'azul verde verde verde'
+						 'azul amarelo amarelo amarelo';
+	color: #FFFFFF;
+	font-weight: 600;
+	text-align: center;
+}
+.vermelho {
+	background-color: #EE1111;
+	grid-area: vermelho;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+.azul {
+	background-color: #1111EE;
+	grid-area: azul;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+.verde {
+	background-color: #11EE11;
+	grid-area: verde;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+.amarelo {
+	background-color: #EEEE11;
+	grid-area: amarelo;
+	padding: 1rem;
+	border-radius: 1rem;
+}
 .quadrado {
 	width: 150px;
 	height: 30px;

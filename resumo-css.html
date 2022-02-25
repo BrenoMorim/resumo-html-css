@@ -629,7 +629,90 @@
 			</section>
 			<section class="mt-5" id="display-grid">
 				<h3>Display-grid:</h3>
-				<p></p>
+				<div>
+					<p>O display grid serve para alterar a forma como o conteúdo da página é posicionado, ideal para layouts mais complexos e que não seguem uma estrutura linear, contendo seções uma do lado da outra, ocupando um espaço pré determinado de linhas e colunas.</p>
+					<article>
+						<h4>A propriedade grid:</h4>
+						<p>Com a propriedade grid é possível definir as linhas e colunas, assim como seus tamanhos de forma enxuta.</p>
+						<p>Exemplos:</p>
+						<div class="exemplo grid" style="grid: auto auto / auto auto auto">
+							<div>div 1</div><div>div 2</div><div>div 3</div>
+							<div>div 4</div><div>div 5</div><div>div 6</div>
+						</div>
+						<p>Foram definidas duas linhas e três colunas, cada uma ocupando o mesmo espaço, por causa do valor auto na propriedade grid:</p>
+						<div class="exemplo">
+							<code class="codigo">
+								grid: {<br>
+									auto auto / auto auto auto;<br>
+									/* linhas / colunas */<br>
+								}
+							</code>
+						</div>
+						<div class="exemplo grid" style="grid: 1fr 2fr / 1fr 1fr 2fr">
+							<div>div 1</div><div>div 2</div><div>div 3</div>
+							<div>div 4</div><div>div 5</div><div>div 6</div>
+						</div>
+						<p>No caso acima, definimos a fração que cada linha e coluna podem ocupar, assim delimitando seus tamanhos facilmente. Também podemos definir seus tamanhos com outras unidades, como em, rem, px, % e entre outras.</p>
+						<div class="exemplo">
+							<code class="codigo">
+								grid: {<br>
+									1fr 2fr / 1fr 1fr 2fr;<br>
+									/* 1/3 2/3 / 1/4 1/4 2/4 */<br>
+								}
+							</code>
+						</div>
+					</article>
+					<article>
+						<h4>Grid areas:</h4>
+						<p>Uma outra forma de usar grid é com as grid areas, onde podemos definir áreas específicas e já onde serão posicionadas, assim como quais linhas e colunas ocuparão.</p>
+						<div class="exemplo grid-area">
+							<div class="vermelho">Cabeçalho</div>
+							<div class="azul">Menu lateral</div>
+							<div class="verde">Conteúdo principal</div>
+							<div class="amarelo">Rodapé</div>
+						</div>
+						<div class="exemplo">
+							<code class="codigo">
+								.grid-area {<br>
+									display: grid;<br>
+									grid-template-areas: 'vermelho vermelho vermelho vermelho'<br>
+														 'azul verde verde verde'<br>
+														 'azul verde verde verde'<br>
+														 'azul verde verde verde'<br>
+														 'azul amarelo amarelo amarelo';<br>
+									color: #FFFFFF;<br>
+									font-weight: 600;<br>
+									text-align: center;<br>
+								}<br>
+								.vermelho {<br>
+									background-color: #EE1111;<br>
+									grid-area: vermelho;<br>
+									padding: 1rem;<br>
+									border-radius: 1rem;<br>
+								}<br>
+								.azul {<br>
+									background-color: #1111EE;<br>
+									grid-area: azul;<br>
+									padding: 1rem;<br>
+									border-radius: 1rem;<br>
+								}<br>
+								.verde {<br>
+									background-color: #11EE11;<br>
+									grid-area: verde;<br>
+									padding: 1rem;<br>
+									border-radius: 1rem;<br>
+								}<br>
+								.amarelo {<br>
+									background-color: #EEEE11;<br>
+									grid-area: amarelo;<br>
+									padding: 1rem;<br>
+									border-radius: 1rem;<br>
+								}<br>
+							</code>
+						</div>
+						<p>É importante saber que é possível usar os displays grid e flex em conjunto, cada seção dentro de um container grid pode ser um container flex. Também podemos adicionar espaçamento entre as linhas e colunas de um grid com as propriedades grid-row-gap e grid-column-gap, de forma parecida com o que temos no display flex.</p>
+					</article>
+				</div>
 			</section>
 		</main>
 		<footer>
