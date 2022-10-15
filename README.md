@@ -6,7 +6,7 @@ Páginas HTML simples para explicar o básico de HTML, CSS e acessibilidade web.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Foge Foge She She**
+| :sparkles: Nome        | **Resumo HTML CSS**
 | :label: Tecnologias | HTML, CSS
 | :rocket: URL         | https://brenomorim.github.io/resumo-html-css/
 
