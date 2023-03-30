@@ -127,29 +127,7 @@ main div a {
 	color: darkgreen;
 	font-weight: bold;
 }
-/* Definindo alguns estilos de exemplo */
-#hover:hover {
-	background-color: #FFF;
-	color: #222;
-}
- #focus:focus {
- 	background-color: lightcyan;
- 	color:  fuchsia;
- } 
-#active:active {
-	background-color: floralwhite;
-	color: firebrick;
-}
-#submit {
-	cursor: pointer;
-}
-#botao-transicao {
-	transition: 1.5s all;
-}
-#botao-transicao:hover {
-	background-color: #FFF;
-	color: #222;
-}
+
 .perfil {
 	opacity: 80%;
 	position: fixed;
@@ -206,58 +184,6 @@ main div a {
 	padding: 0 3em;
 	display: block;
 }
-.entre-parenteses::before {
-	content: "( ";
-}
-.entre-parenteses::after {
-	content: " )";
-}
-.primeira-em-negrito::first-letter {
-	font-weight: bold;
-}
-.primeira-maior::first-letter {
-	font-size: 1.4em;
-}
-.degrade {
-	background: linear-gradient(grey, lightgrey, white);
-}
-.degrade-vertical {
-	background: linear-gradient(90deg, grey, lightgrey, white);
-}
-.degrade-circular {
-	background: radial-gradient(lightgrey, white);
-}
-.arco-iris {
-	background: linear-gradient(90deg, red, orange, yellow, green, blue, darkblue, violet);
-}
-.transformar {
-	transition: 1.5s all;
-}
-.scale:hover {
-	transform: scale(1.2);
-}
-.rotate:hover {
-	transform: rotate(360deg);
-}
-.listaComListStyle {
-	list-style: disc;
-}
-.listaComListStyle li::before {
-	content: "";
-}
-.listaComPseudoelemento li::before {
-	content: "• ";
-}
-:root {
-	--branco: #FFF;
-	--fonte-sans: sans-serif;
-	--rosa: #F0F; 
-}
-.exemplo-variaveis {
-	font-family: var(--fonte-sans);
-	background-color: var(--rosa);
-	color: var(--branco);
-}
 .linhaCodigo {
 	display: block;
 	margin: 0;
@@ -268,64 +194,7 @@ article h4 {
 	margin-top: 1.5rem;
 	font-weight: 600;
 }
-.flex {
-	display: flex;
-}
-.grid {
-	display: grid;
-}
-.grid div {
-	background-color: darkgreen;
-	color: #FFFFFF;
-	font-weight: 600;
-	text-align: center;
-	padding: 1rem;
-	border-radius: 1rem;
-}
-.grid-area {
-	display: grid;
-	grid-template-areas: 'vermelho vermelho vermelho vermelho'
-						 'azul verde verde verde'
-						 'azul verde verde verde'
-						 'azul verde verde verde'
-						 'azul amarelo amarelo amarelo';
-	color: #FFFFFF;
-	font-weight: 600;
-	text-align: center;
-}
-.vermelho {
-	background-color: #EE1111;
-	grid-area: vermelho;
-	padding: 1rem;
-	border-radius: 1rem;
-}
-.azul {
-	background-color: #1111EE;
-	grid-area: azul;
-	padding: 1rem;
-	border-radius: 1rem;
-}
-.verde {
-	background-color: #11EE11;
-	grid-area: verde;
-	padding: 1rem;
-	border-radius: 1rem;
-}
-.amarelo {
-	background-color: #EEEE11;
-	grid-area: amarelo;
-	padding: 1rem;
-	border-radius: 1rem;
-}
-.quadrado {
-	width: 150px;
-	height: 30px;
-	color: #EEE;
-	display: inline-block;
-	background-color: firebrick;
-	border-radius: 1rem;
-	margin: 0.5rem 1rem;
-}
+
 footer {
 	text-align: center;
 	margin-top:  1.5em;

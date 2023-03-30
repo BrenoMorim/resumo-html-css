@@ -18,7 +18,7 @@ Vários conteúdos são abordados, na página com o resumo de HTML temos as prin
 
 ### HTML
 
-![Início da página sobre HTML](./paginas/html.png)
+![Início da página sobre HTML](./imagens-paginas/html.png)
 
 - Tags iniciais
 - Divisões de uma Página
@@ -27,12 +27,13 @@ Vários conteúdos são abordados, na página com o resumo de HTML temos as prin
 - Botões e formulários
 - Tabelas
 - Emmet
+- Boas práticas de SEO
 
 ---
 
 ### CSS
 
-![Início da página sobre CSS](./paginas/css.png)
+![Início da página sobre CSS](./imagens-paginas/css.png)
 
 - Seleções
 - Cores, medidas e espaçamentos
@@ -49,7 +50,7 @@ Vários conteúdos são abordados, na página com o resumo de HTML temos as prin
 
 ### Acessibilidade
 
-![Início da página sobre acessibilidade](./paginas/acessibilidade.png)
+![Início da página sobre acessibilidade](./imagens-paginas/acessibilidade.png)
 
 - Introdução
 - Autismo
