@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width"/>
+	<meta name="description" content="Resumo sobre HTML baseado nos treinamentos da escola de front-end da Alura.">
 	<title>Resumo HTML</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -34,6 +35,7 @@
 					<li><a class="ancora" href="#formularios">Botões e formulários</a></li>
 					<li><a class="ancora" href="#tabelas">Tabelas</a></li>
 					<li><a class="ancora" href="#emmet">Emmet</a></li>
+					<li><a class="ancora" href="#SEO">Boas Práticas de SEO</a></li>
 				</ul>
 			</summary>
 		</nav>
@@ -152,7 +154,7 @@
 							<img class="video" src="https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg" alt="Wallpaper do Windows, imagem usada de exemplo">
 						</figure>
 						<div class="video">
-							<iframe src="https://www.youtube.com/embed/nLPssMXOExM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: inline-block;"></iframe>
+							<iframe src="https://www.youtube.com/embed/nLPssMXOExM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: inline-block;"></iframe>
 						</div>
 					</div>
 				</div>
@@ -168,7 +170,7 @@
 					<h3>Importando mapas:</h3>
 					<p>É possível incorporar mapas usando a tag iframe. O código de incorporação pode ser obtido através de serviços como o <a href="https://maps.google.com">Google Maps</a>.</p>
 					<div class="mapa exemplo col-12 p-3">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10193.456976521953!2d-46.66125233356872!3d-23.591719610921757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59bf1f78db9f%3A0x669617b18ff956ca!2sParque%20Ibirapuera%20-%20Port%C3%A3o%207!5e0!3m2!1spt-BR!2sbr!4v1632568349230!5m2!1spt-BR!2sbr" width="100%" height="380" style="border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+						<iframe title="Mapa do parque Ibirapuera" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10193.456976521953!2d-46.66125233356872!3d-23.591719610921757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59bf1f78db9f%3A0x669617b18ff956ca!2sParque%20Ibirapuera%20-%20Port%C3%A3o%207!5e0!3m2!1spt-BR!2sbr!4v1632568349230!5m2!1spt-BR!2sbr" width="100%" height="380" style="border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
 					</div>
 				</div>
 			</section>
@@ -323,6 +325,40 @@
 						<code class="codigo" id="abreviacaoEmmet">
 						</code>
 					</div>
+				</div>
+			</section>
+			<section id="SEO">
+				<h2>Boas Práticas de SEO</h2>
+				<div>
+					<p>SEO é uma sigla para Search Engine Optimization, o que significa basicamente otimização de mecanismos de busca. Esse mecanismo serve para posicionar as páginas de acordo com a busca do usuário, com o objetivo de gerar um tráfego orgânico e que satisfaça o usuário.</p>
+					<p>O processo de SEO vai gerar um ranqueamento dos sites mais adequados para a busca feita no navegador. A maioria das características analisadas pelo SEO são relacionadas a performance, usabilidade, acessibilidade, navegabilidade e comunicabilidade. Basicamente o site deve ter navegação fácil e intuitiva, conteúdo nos tamanhos adequados e deixar claro sobre o que a página fala.</p>
+					<div>
+						<h3>Algumas recomendações:</h3>
+						<p>SEO é um tema extenso, porém estas são algumas das recomendações mais importantes que podem ser cumpridas sem muita dificuldade:</p>
+						<ul>
+							<li>Usar fontes de tamanho legível</li>
+							<li>Botões e elementos clicáveis devem ter tamanhos apropriados</li>
+							<li>Colocar o atributo "alt" nas imagens</li>
+							<li>Links atualizados e funcionando, a página deve poder ser acessada por outra, assim como levar o usuário a outras páginas</li>
+							<li>Especificar o idioma do documento com o atributo "lang"</li>
+							<li>Evitar plugins, já que não podem ser indexados pelos mecanismos de busca e nem todos os dispositivos podem ter suporte a certo plugin</li>
+							<li>Links devem ter texto descritivo, deixando claro sua função e para onde levam</li>
+							<li>Página deve retornar um HTTP status code de sucesso (da "família" 200)</li>
+							<li>O documento deve ter uma tag meta description, que contém uma breve descrição sobre o conteúdo da página</li>
+							<li>A página HTML deve ter um title (definido na head do HTML)</li>
+							<li>Possuir uma tag meta viewport, por questões de acessibilidade</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Core Web Vitals</h3>
+						<p>A Core Web Vitals são formadas por 3 métricas focadas na experiência do usuário:</p>
+						<ul>
+							<li>LCP - Sigla para Largest Contentful Paint, analisa o tempo necessário para que a maior parte do conteúdo visível da página seja carregado.</li>
+							<li>FID - Sigla para First Input Delay, mede o tempo de resposta da página para uma interação do usuário.</li>
+							<li>CLS - Significa Cumulative Layout Shift, avalia a estabilidade da página, isto é, se o conteúdo fica estável durante o carregamento e também se há mudanças que fogem do controle do usuário.</li>
+						</ul>
+					</div>
+					<h4>Uma boa ferramenta para a análise dessas questões de SEO é a Lighthouse, disponível como extensão nos navegadores.</h4>
 				</div>
 			</section>
 		</main>

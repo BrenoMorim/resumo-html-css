@@ -56,7 +56,8 @@ nav ul {
 .ancora {
 	transition: 0.5s all;
 	text-align: right;
-	margin-left: 1em;
+	margin-left: 1rem;
+	font-size: 1.4rem;
 	color:  #222;
 	text-decoration: none;
 	font-weight: 700;
@@ -67,7 +68,7 @@ nav ul {
 .ancora:hover {
 	text-decoration: underline;
 	color: #000;
-	font-size: 1.1em;
+	font-size: 1.5rem;
 }
 footer {
 	border-top-right-radius: 15px;
@@ -150,18 +151,17 @@ main div a {
 	color: #222;
 }
 .perfil {
-	opacity: 70%;
+	opacity: 80%;
 	position: fixed;
 	font-size: 0.9em;
 	padding: 0.6em;
 	right: 1em;
 	border-radius: 15px;
-	color: #CDCDCD;
+	color: #FFFFFF;
 	background-color: green;
 	top: 0.5em;
 	text-decoration: none;
 	transition: 0.5s all;
-	box-shadow: inset 0 0 8px lightgreen;
 }
 .perfil:hover {
 	opacity: 100%;
