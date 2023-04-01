@@ -36,6 +36,7 @@
 					<li><a class="ancora" href="#formularios">Botões e formulários</a></li>
 					<li><a class="ancora" href="#tabelas">Tabelas</a></li>
 					<li><a class="ancora" href="#emmet">Emmet</a></li>
+					<li><a class="ancora" href="favicon">Inclusão de favicon</a></li>
 					<li><a class="ancora" href="#SEO">Boas práticas de SEO</a></li>
 				</ul>
 			</summary>
@@ -328,6 +329,18 @@
 					</div>
 				</div>
 			</section>
+			<section id="favicon">
+				<h2>Inclusão de favicon</h2>
+				<div>
+					<p>Quando estamos navegando na internet, é possível perceber que na maioria dos sites há um ícone ao lado esquerdo do título das guias, esse ícone geralmente é chamado favicon.ico, que pode ser definido no head da página com uma tag link.</p>
+					<p>Existem vários tipos de ícones de cada dispositivo e tamanho, porém o mais comum é o favicon.ico de 16 por 16 pixels. É possível gerar um ícone desses gratuitamente na internet a partir de um arquivo de imagem através do seguinte site, por exemplo: <a href="https://www.favicon-generator.org/">Gerador de ícones</a>.</p>
+					<div class="exemplo col-12">
+						<p>Após o ícone ter sido criado e já estiver na pasta do projeto, basta o importar com uma tag link:</p>
+						<code class="codigo" id="inclusaoDeFavicon">
+						</code>
+					</div>
+				</div>
+			</section>
 			<section id="SEO">
 				<h2>Boas práticas de SEO</h2>
 				<div>
@@ -385,9 +398,11 @@
 	codigo.forEach(linha => {
 		let span = document.createElement('span');
 		span.textContent = linha;
-		span.classList.add("linhaCodigo")
+		span.classList.add("linhaCodigo");
 		emmet.appendChild(span);
 	});
+	const codigoIcone = document.getElementById("inclusaoDeFavicon");
+	codigoIcone.textContent = `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`;
 	</script>
 </body>
 </html>
